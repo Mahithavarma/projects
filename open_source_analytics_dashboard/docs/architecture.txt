@@ -1,0 +1,20 @@
+
+Architecture Diagram:
++-------------------------------+
+|      Real-Time Dashboard      |
+|      (React Frontend)         |
++---------------+---------------+
+                |
+       API Calls via HTTP
+                |
++---------------v---------------+
+|       Flask Backend API       |
+|   Fetches Data from Real-Time |
+|   Weather API (Open-Meteo)    |
++---------------+---------------+
+                |
+         Real-Time Data
+                |
++---------------v---------------+
+|      Open-Meteo Weather API   |
++-------------------------------+
