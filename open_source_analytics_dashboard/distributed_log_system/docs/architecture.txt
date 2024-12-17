@@ -1,0 +1,4 @@
+
+Distributed Log Aggregation System Architecture:
+1. Kafka Producers -> Kafka Topic -> Elasticsearch -> React Dashboard.
+2. Real-time logs are visualized on the React Dashboard.
