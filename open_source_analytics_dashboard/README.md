@@ -41,5 +41,3 @@ Refer to the `docs/architecture.txt` file for a visual overview.
 - **API**: Open-Meteo Weather API
 - **Deployment**: Docker Compose
 
-## License
-MIT License
