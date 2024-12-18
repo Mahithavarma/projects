@@ -1,0 +1,5 @@
+
+Cloud-Based Pipeline Architecture:
+1. Stock prices fetched from Yahoo Finance API.
+2. AWS Lambda processes and stores data in DynamoDB.
+3. React frontend fetches data via API Gateway.

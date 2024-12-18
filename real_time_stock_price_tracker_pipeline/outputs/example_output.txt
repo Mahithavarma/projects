@@ -1,0 +1,7 @@
+
+Example Stock Prices Fetched and Stored:
+[
+  {"symbol": "AAPL", "price": 145.32, "timestamp": 1670000000},
+  {"symbol": "MSFT", "price": 299.01, "timestamp": 1670000000},
+  {"symbol": "GOOG", "price": 2810.56, "timestamp": 1670000000}
+]
