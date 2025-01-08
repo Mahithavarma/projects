@@ -28,10 +28,10 @@ Developed a convolutional neural network (CNN) model to analyze and classify ima
 - OpenCV: Image processing.
 
 ## Challenges Faced & How They Were Overcome:
-   **Challenge**: Acquiring a diverse dataset of real and fake images.
-   **Solution**: Aggregated data from multiple open-source repositories and applied data augmentation.
-   **Challenge**: Preventing overfitting during model training.
-   **Solution**: Implemented dropout layers and regularization techniques.
+- **Challenge**: Acquiring a diverse dataset of real and fake images.
+- **Solution**: Aggregated data from multiple open-source repositories and applied data augmentation.
+- **Challenge**: Preventing overfitting during model training.
+- **Solution**: Implemented dropout layers and regularization techniques.
 
 ## Results:
 - Achieved an accuracy of 92% in detecting fake images.
