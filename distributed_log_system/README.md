@@ -39,7 +39,7 @@ Developed a scalable and fault-tolerant distributed logging system capable of re
 -	Challenge: Managing storage for high-volume log data.
 -	Solution: Employed HDFS for scalable storage and implemented data retention policies to manage disk space.
 
-## Results/Impact:
+## Results:
 - Achieved real-time processing of log data with minimal latency.
 - Improved system reliability and scalability, capable of handling millions of log entries per second.
 - Enhanced monitoring and alerting facilitated proactive issue detection and resolution.
