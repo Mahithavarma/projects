@@ -4,6 +4,12 @@
 ## Description
 A real-time analytics dashboard that fetches and displays live weather data every 5 seconds. It demonstrates a clean architecture with React (frontend), Flask (backend), and real-time API integration.
 
+## Problem Statement:
+Organizations need accessible tools to analyze data and derive insights without relying on proprietary software, which can be costly and inflexible.
+
+## Solution:
+Developed an open-source analytics dashboard that allows users to upload datasets, perform analyses, and visualize results through interactive charts and graphs.
+
 ## Architecture
 The system is composed of the following components:
 
@@ -40,4 +46,14 @@ Refer to the `docs/architecture.txt` file for a visual overview.
 - **Backend**: Flask
 - **API**: Open-Meteo Weather API
 - **Deployment**: Docker Compose
+
+## Challenges Faced & How They Were Overcome:
+- **Challenge**: Ensuring the application can handle large datasets efficiently.
+- **Solution**: Implemented data chunking and optimized data processing workflows.
+- **Challenge**: Providing a user-friendly interface for non-technical users.
+- **Solution**: Designed intuitive navigation and included tooltips for guidance.
+
+## Results:
+- Enabled users to perform data analysis without coding expertise.
+- Facilitated data-driven decision-making through accessible analytics tools.
 
