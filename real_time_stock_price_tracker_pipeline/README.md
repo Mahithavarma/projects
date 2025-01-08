@@ -37,18 +37,18 @@ Built a real-time stock price tracker using Apache Kafka for data ingestion, Apa
 Refer to the architecture diagram in the `docs` folder.
 
 ## Tech Stack:
-	•	Apache Kafka: Data ingestion.
-	•	Apache Flink: Stream processing.
-	•	PostgreSQL: Data storage.
-	•	Grafana: Data visualization.
-	•	Docker Compose: Service orchestration.
+- Apache Kafka: Data ingestion.
+- Apache Flink: Stream processing.
+- PostgreSQL: Data storage.
+- Grafana: Data visualization.
+- Docker Compose: Service orchestration.
 
 ## Challenges Faced & How They Were Overcome:
-	•	Challenge: Maintaining data consistency during high-frequency trading hours.
-	•	Solution: Implemented robust error-handling and data validation mechanisms.
-	•	Challenge: Scaling the system to handle multiple stock feeds simultaneously.
-	•	Solution: Deployed a distributed architecture with load balancing.
+- **Challenge**: Maintaining data consistency during high-frequency trading hours.
+- **Solution**: Implemented robust error-handling and data validation mechanisms.
+- **Challenge**: Scaling the system to handle multiple stock feeds simultaneously.
+- **Solution**: Deployed a distributed architecture with load balancing.
 
 ## Results:
-	•	Provided investors with real-time stock price updates, enhancing decision-making.
-	•	System demonstrated high reliability with 99.9% uptime during market hours.
+- Provided investors with real-time stock price updates, enhancing decision-making.
+- System demonstrated high reliability with 99.9% uptime during market hours.
