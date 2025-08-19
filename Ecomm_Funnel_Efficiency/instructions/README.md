@@ -53,14 +53,14 @@ cp .env.example .env
 # Create/merge into ~/.dbt/profiles.yml (example below)E-comm Funnel & Efficiency — SQL funnel and BI views.
 
 ---
-Typical workflow
+## Typical workflow
 	1.	Ingest sources (clickstream, orders, marketing spend).
 	2.	Run dbt build to materialize: stg_* → int_* → fct_funnel_*.
 	3.	Check KPIs: stage conversion rates, AOV, CAC, LTV.
 	4.	Inspect bottleneck ranking and anomaly flags (views in /dashboards or Streamlit).
 	5.	Ship a change → log an experiment → run the experiment readout notebook to measure lift.
 ---
-Contribution Guidelines
+## Contribution Guidelines
 	•	Issues: Use templates for bug reports/feature requests. Add repro steps + expected vs actual.
 	•	Branches: feature/<slug> or fix/<slug>. Use small, focused PRs.
 	•	Commits: Conventional commits (feat:, fix:, docs:, refactor:).
@@ -68,6 +68,6 @@ Contribution Guidelines
 	•	Style: Run pre-commit hooks locally (ruff, black, sqlfluff) before pushing.
 	•	CI: All checks must pass (lint, unit, dbt compile/build dry-run).
 ---
-Acknowledgments
+## Acknowledgments
 
 Shout-out to the dbt community and the maintainers of the open-source libraries used here. Inspired by real-world growth/analytics work across Shopify + GA4 stacks.
