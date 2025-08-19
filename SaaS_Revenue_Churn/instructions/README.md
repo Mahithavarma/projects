@@ -9,7 +9,6 @@ I use this repo to make churn measurable, explainable, and fixable. It reconcile
 	•	Tech Stack
 	•	Requirements
 	•	Install
-	•	Configuration
 	•	Usage
 	•	Dashboards & Notebooks
 	•	Directory Layout
@@ -63,57 +62,6 @@ $ pre-commit install
 
 ⸻
 
-## Configuration
-	1.	Environment variables (copy the example and edit):
-$ cp .env.example .env
-.env.example includes common keys:
-WAREHOUSE_TARGET=snowflake        # or bigquery/redshift
-SCHEMA=analytics
-SNOWFLAKE_ACCOUNT=xxx
-SNOWFLAKE_USER=xxx
-SNOWFLAKE_PASSWORD=xxx
-SNOWFLAKE_ROLE=ANALYST
-SNOWFLAKE_DATABASE=ANALYTICS
-SNOWFLAKE_WAREHOUSE=TRANSFORM
-BQ_PROJECT=your-project
-BIGQUERY_KEYFILE=/path/to/key.json
-REDSHIFT_HOST=host
-REDSHIFT_PORT=5439
-REDSHIFT_DB=db
-REDSHIFT_USER=user
-REDSHIFT_PASSWORD=pwd
-STRIPE_SECRET_KEY=sk_live_xxx
-CHARGEBEE_SITE=…
-CHARGEBEE_API_KEY=…
-FX_SOURCE=daily                   # ‘daily’ rates table or ‘none’
-	2.	dbt profile (~/.dbt/profiles.yml):
-saas_revenue_churn:
-target: snowflake
-outputs:
-snowflake:
-type: snowflake
-account: “{{ env_var(‘SNOWFLAKE_ACCOUNT’) }}”
-user: “{{ env_var(‘SNOWFLAKE_USER’) }}”
-password: “{{ env_var(‘SNOWFLAKE_PASSWORD’) }}”
-role: “{{ env_var(‘SNOWFLAKE_ROLE’) }}”
-database: “{{ env_var(‘SNOWFLAKE_DATABASE’) }}”
-warehouse: “{{ env_var(‘SNOWFLAKE_WAREHOUSE’) }}”
-schema: “{{ env_var(‘SCHEMA’) }}”
-bigquery:
-type: bigquery
-method: service-account
-keyfile: “{{ env_var(‘BIGQUERY_KEYFILE’) }}”
-project: “{{ env_var(‘BQ_PROJECT’) }}”
-dataset: “{{ env_var(‘SCHEMA’) }}”
-threads: 8
-redshift:
-type: redshift
-host: “{{ env_var(‘REDSHIFT_HOST’) }}”
-user: “{{ env_var(‘REDSHIFT_USER’) }}”
-password: “{{ env_var(‘REDSHIFT_PASSWORD’) }}”
-port: “{{ env_var(‘REDSHIFT_PORT’) | int }}”
-dbname: “{{ env_var(‘REDSHIFT_DB’) }}”
-schema: “{{ env_var(‘SCHEMA’) }}”SaaS Revenue & Churn — see SQL & dashboard spec in your guide.
 ## Metric definitions (auditable)
 	•	MRR: monthlyized value of active subscription(s) net of discounts/credits/tax.
 	•	NRR = (MRR_start + Expansion − Contraction − Churn + Reactivation) / MRR_start
