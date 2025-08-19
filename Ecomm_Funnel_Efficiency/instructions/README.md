@@ -10,7 +10,6 @@ I use this project to find and fix conversion leaks across the e-commerce funnel
 - Installation
 - Usage
 - Contribution Guidelines
-- License
 - Acknowledgments
 
 ---
