@@ -185,7 +185,6 @@ Small, focused PRs.
 	•	Run make test before pushing
 
 
-⸻
 
 ## Acknowledgments
 
