@@ -2,7 +2,6 @@ SaaS_Revenue_Churn
 
 I use this repo to make churn measurable, explainable, and fixable. It reconciles billing + product usage into audited revenue metrics (MRR/ARR, GRR/NRR, expansion/contraction/reactivation/logo churn), flags risk early, and gives me a tight loop: detect → prioritize → intervene → measure lift.
 
-⸻
 
 ## Table of Contents
 	•	What’s Inside
@@ -19,7 +18,7 @@ I use this repo to make churn measurable, explainable, and fixable. It reconcile
 	•	Contributing
 	•	Acknowledgments
 
-⸻
+
 
 ## What’s Inside
 	•	Warehouse-native models (dbt) that produce daily, reconciled MRR movements and NRR waterfalls that Finance/Product/Growth can all sign off on.
@@ -28,7 +27,7 @@ I use this repo to make churn measurable, explainable, and fixable. It reconcile
 	•	Playbooks: proactive outreach, dunning tweaks, save offers; tracked for incremental impact (not vanity “cancellations prevented”).
 	•	Dashboards/notebooks to explore cohorts, retention, NRR drivers, and account-level risk.
 
-⸻
+
 
 ## Tech Stack
 	•	Languages: Python 3.10+, SQL
@@ -39,7 +38,7 @@ I use this repo to make churn measurable, explainable, and fixable. It reconcile
 	•	ML (optional): scikit-learn, lifelines
 	•	Tooling: Makefile, pre-commit, pytest, sqlfluff, ruff
 
-⸻
+
 
 ## Requirements
 	•	Python 3.10+
@@ -48,7 +47,7 @@ I use this repo to make churn measurable, explainable, and fixable. It reconcile
 	•	(Optional) Service account for BigQuery; key-pair or password for Snowflake
 	•	(Optional) Streamlit for dashboard
 
-⸻
+
 
 ## Install
 	1.	Clone
@@ -60,7 +59,7 @@ $ pip install -r requirements.txt
 	3.	Pre-commit hooks (lint/format/SQL style)
 $ pre-commit install
 
-⸻
+
 
 ## Metric definitions (auditable)
 	•	MRR: monthlyized value of active subscription(s) net of discounts/credits/tax.
@@ -97,7 +96,7 @@ from utils.queries import top_churn_drivers
 df = top_churn_drivers(segment=“SMB”, lookback_days=180, top_k=10)
 print(df)
 
-⸻
+
 
 ## Dashboards & Notebooks
 	•	/dashboards/nrr_waterfall.sql → base view for your BI tool
@@ -106,7 +105,7 @@ print(df)
 	•	Optional Streamlit starter:
 $ streamlit run examples/churn_app.py
 
-⸻
+
 
 ## Directory Layout
 
@@ -125,7 +124,7 @@ SaaS_Revenue_Churn/
 ├─ .env.example
 └─ Makefile
 
-⸻
+
 
 ## Tests & Quality
 	•	dbt tests: not null, unique, accepted values, referential integrity
@@ -136,7 +135,7 @@ SaaS_Revenue_Churn/
 Run everything
 $ make test
 
-⸻
+
 
 ## CI/CD
 	•	Build: compile dbt, run unit tests, dry-run models on PR
@@ -158,7 +157,7 @@ with: { python-version: “3.11” }
 - run: dbt deps && dbt compile
 - run: pytest -q
 
-⸻
+
 
 ## Security & PII
 	•	Least-privilege warehouse roles; read-only sources where possible
@@ -166,7 +165,7 @@ with: { python-version: “3.11” }
 	•	Secrets via env vars or your secrets manager (no keys in code)
 	•	Optional row-level security by account/region
 
-⸻
+
 
 ## Troubleshooting
 	•	Numbers don’t tie to billing → check timezone alignment + FX table date coverage
@@ -175,7 +174,7 @@ with: { python-version: “3.11” }
 	•	BigQuery permissions → grant roles/bigquery.dataEditor on target dataset
 	•	Snowflake warehouse suspended → set auto_resume=true or pick a bigger warehouse for the first full build
 
-⸻
+
 
 ## Contributing
 
