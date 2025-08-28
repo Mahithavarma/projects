@@ -1,6 +1,5 @@
 # Automated Customer Support System
-
-**Role:** Business Data Analyst  
+  
 **Outcome:** Faster triage and reporting, SLA adherence, and measurable insights for support operations.
 
 ## Business Context
