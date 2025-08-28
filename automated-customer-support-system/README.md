@@ -40,7 +40,7 @@ automated-customer-support-system/
       └─ README.md
 ```
 
-## How to Review in 2 Minutes
+## How to Review
 1. Read `docs/BRD.md` then skim `docs/UserStories.md`.  
 2. View `docs/Process/*` for As‑Is, To‑Be, and Data‑Flow (Mermaid diagrams render on GitHub).  
 3. Check `docs/NFRs.md` and `docs/SecurityPII.md`.  
@@ -48,7 +48,7 @@ automated-customer-support-system/
 5. Peek at `src/azure/function_example` and `src/powerbi/README.md`.
 
 ## Architecture (Mermaid)
-```mermaid
+```
 flowchart LR
   User[Customer] -->|Submit ticket| App[App Service]
   App --> Func[Azure Function]
@@ -58,4 +58,3 @@ flowchart LR
   PBI --> Dash[Power BI Dashboard]
 ```
 
-*All data is sample or redacted. Replace placeholders with sanitized artifacts before making the repository public.*
