@@ -47,7 +47,7 @@ automated-customer-support-system/
 4. Open `docs/RTM.xlsx` and `docs/UAT/UAT_Plan.md`.  
 5. Peek at `src/azure/function_example` and `src/powerbi/README.md`.
 
-## Architecture (Mermaid)
+## Architecture
 ```mermaid
 flowchart LR
   User[Customer] -->|Submit ticket| App[App Service]
