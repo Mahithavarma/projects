@@ -48,7 +48,7 @@ automated-customer-support-system/
 5. Peek at `src/azure/function_example` and `src/powerbi/README.md`.
 
 ## Architecture (Mermaid)
-```
+```mermaid
 flowchart LR
   User[Customer] -->|Submit ticket| App[App Service]
   App --> Func[Azure Function]
